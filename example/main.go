@@ -17,7 +17,7 @@ func loadPng(name string) (image.Image, error) {
 
 	return png.Decode(sourceImageFile)
 
-}g
+}
 
 func main() {
 
