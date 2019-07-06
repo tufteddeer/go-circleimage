@@ -5,6 +5,7 @@ import (
 	"image/png"
 	"log"
 	"os"
+	"github.com/tufteddeer/go-circleImage"
 )
 
 func loadPng(name string) (image.Image, error) {
@@ -16,7 +17,7 @@ func loadPng(name string) (image.Image, error) {
 
 	return png.Decode(sourceImageFile)
 
-}
+}g
 
 func main() {
 
@@ -26,7 +27,7 @@ func main() {
 	}
 
 	radius := 70
-	rounded := CircleImage(source, image.Point{115, 80}, radius)
+	rounded := circleimage.CircleImage(source, image.Point{115, 80}, radius)
 
 	outputFile, err := os.Create("result.png")
 	if err != nil {
