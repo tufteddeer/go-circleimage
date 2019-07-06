@@ -20,13 +20,13 @@ func loadPng(name string) (image.Image, error) {
 
 func main() {
 
-	source, err := loadPng("gopher.png")
+	source, err := loadPng("biplane.png")
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 
-	radius := 150
-	rounded := CircleImage(source, image.Point{150, 150}, radius)
+	radius := 70
+	rounded := CircleImage(source, image.Point{115, 80}, radius)
 
 	outputFile, err := os.Create("result.png")
 	if err != nil {
